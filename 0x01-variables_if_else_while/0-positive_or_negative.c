@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - assigns a random number to the variable n
  * return: 0
@@ -7,10 +8,9 @@
 int main(void)
 {
 		int n;
+		char c;
 
-
-
-			srand(time(0));
+		srand(time(0));
 
 				n = rand() - RAND_MAX / 2;
 				while (n > 0)
@@ -19,7 +19,7 @@ int main(void)
 				while (n == 0)
 				{
 					printf("is zero\n");
-				while (a < 0)
+				while (n < 0)
 				{
 					printf("is negative\n");
 				}
