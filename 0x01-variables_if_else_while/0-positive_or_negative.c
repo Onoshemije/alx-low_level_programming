@@ -14,7 +14,6 @@ int main(void)
 				n = rand() - RAND_MAX / 2;
 		int randomNumber;
 
-		for (int n = 0; n < 0; n > 0)
 		if (n == 0)
 		printf("is zero\n");
 		{
