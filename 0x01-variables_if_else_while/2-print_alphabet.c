@@ -11,8 +11,8 @@ int main(void)
 {
 	char ch;
 
-	for (ch = ‘a’; ch <= ‘z’; ch++)
-	putchar(ch)
-	putchar (‘\n’);
+	putchar("\nLowercase characters : \n");
+	for (ch = 'a'; ch <= 'z'; ch++)
+	putchar("%c ", ch);
 	return (0);
 }
