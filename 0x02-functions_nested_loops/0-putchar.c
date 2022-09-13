@@ -1,16 +1,19 @@
-#include <stdio.h>
-#include <main.h>
+#include <_putchar.h>
 /**
- * main - putchar
- * Description: program prints putchar
+ * main - function to print putchar
+ * Description: program prints _putchar
  * Return: 0
  */
 int main(void)
 {
-	char c;
+	char _putchar[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n',};
+	unsigned int c;
 
-	printf("_putchar");
+	for (c = 0; c < sizeof(_putchar));
+	c++);
 	{
-	printf("\n");
+	_putchar(_putchar[c]);
+	}
+	_putchar('\n');
 	return (0);
 }
