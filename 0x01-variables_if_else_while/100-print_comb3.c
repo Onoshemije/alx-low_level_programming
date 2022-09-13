@@ -1,4 +1,4 @@
-#include <sdio.h>
+#include <stdio.h>
 /**
  * main - combinations
  * Description: prints all possible different combinations of two digits
