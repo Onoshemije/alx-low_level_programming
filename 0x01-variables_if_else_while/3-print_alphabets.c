@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - putchar
+ * main - alphabet
  *
- * Description: prints the alphabet in lowercase, and then in uppercase
+ * Description: print the alphabet in lowercase, and then in uppercase
  * Return: 0
  */
 int main(void)
@@ -17,6 +17,6 @@ for (ch = 'a'; ch <= 'z' ; ch++)
 {
 	putchar(ch);
 }
-	putchar (‘\n’);
+	putchar ('\n');
 	return (0);
 }
