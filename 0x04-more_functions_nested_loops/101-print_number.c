@@ -1,22 +1,22 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
- * print_number - Prints a number
- * @n: The number to print
+ * print_number - Prints an integer
+ * @n: tracked var
  */
 
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int x = n;
 
 	if (n < 0)
 	{
-		putchar('-');
-		num = -num;
+		_putchar(45);
+		x = -x;
 	}
-	if (num > 9)
+	if ((x / 10) > 0)
 	{
-		print_number(num / 10);
+		print_number(x / 10);
 	}
-	putchar(num % 10 + '0');
+	_putchar((x % 10) + 48);
 }
