@@ -9,10 +9,9 @@ int squareroot(int n, int i);
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else
-		return (squareroot(n, (n + 1) / 2));
+	if (n == 1 || n == 0)
+		return (n);
+	return (_sqrt(0, n));
 }
 
 /**
@@ -24,11 +23,9 @@ int _sqrt_recursion(int n)
 
 int squareroot(int n, int i)
 {
-	if (i < 1)
+	if (n > x / 2)
 		return (-1);
-	else if (i * i == n)
-		return (i);
-	else
-		return (squareroot(n, i - 1));
+	else if (n * n == x)
+		return (n);
+	return (_sqrt(n + 1, x));
 }
-
