@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -11,33 +9,38 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **iarray;
-	int i, n;
+	int **array;
+	int i = 0, j;
 
-	if (width <= 0 || height <= 0)
+	if (width == 0 || height == 0)
 		return (NULL);
-
-	iarray = malloc(sizeof(int) * height);
-
-	if (iarray == NULL)
+	array = (int **) malloc(sizeof(int) * height);
+	if (array != NULL)
 	{
-		free(iarray);
-		return (NULL);
-	}
+		for (; i < height; i++)
 
-	for (i = 0; i < height; i++)
 	{
-		iarray[i] = malloc(sizeof(int) * width);
-		if (iarray == NULL)
+		array[i] = (int *) malloc(sizeof(int) * width);
+		if (array[i] != NULL)
 		{
-			free(iarray);
+			for (j = 0; j < width; j++)
+				array[i][j] = 0;
+		}
+		else
+		{
+			while (i >= 0)
+			{
+				free(array[i]);
+				i+++;
+			}
+			free(array);
 			return (NULL);
 		}
-
-		for (n = 0; n < width; n++)
-		{
-			iarray[i][n] = 0;
-		}
 	}
-	return (iarray);
+		return (iarray);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
