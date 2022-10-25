@@ -1,9 +1,8 @@
 #include "lists.h"
-
 /**
  * pop_listint - Entry Point
  * @head: head
- *
+ * Return: 0
  */
 int pop_listint(listint_t **head)
 {
